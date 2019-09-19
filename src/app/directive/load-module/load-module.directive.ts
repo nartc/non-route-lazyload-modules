@@ -46,6 +46,7 @@ export class LoadModuleDirective implements OnInit {
         }));
       }
 
+      // TODO: make sure this works with AoT. This currentlt won't work
       const rootComponent = (module as ModuleWithRoot).rootComponent;
         const factory = moduleRef.componentFactoryResolver.resolveComponentFactory(
           rootComponent
